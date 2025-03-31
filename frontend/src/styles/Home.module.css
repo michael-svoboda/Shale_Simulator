@@ -1,0 +1,173 @@
+:global(:root) {
+  --primary-color: #2a9d8f;
+  --secondary-color: #264653;
+  --accent-color: #e9c46a;
+  --background-color: #f4f1de;
+  --panel-bg: #f7f7f7;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:global(*) {
+  box-sizing: border-box;
+}
+
+:global(body) {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+}
+
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+
+.mainView {
+  flex: 1;
+  position: relative;
+  background-color: #fff;
+}
+
+.rightPanel {
+  background-color: var(--panel-bg);
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  overflow-y: auto;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.buttonGroup button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.buttonGroup button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.buttonGroup button:hover:not(:disabled) {
+  background-color: var(--accent-color);
+}
+
+.sliders {
+  margin-top: 20px;
+}
+
+.sliderGroup {
+  margin-bottom: 20px;
+}
+
+.sliderGroup label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.sliderGroup input[type="range"] {
+  width: 100%;
+}
+
+/* New classes for playback row and play button */
+.playbackRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.playButton {
+  background-color: var(--primary-color);
+  border: none;
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.playButton:hover {
+  background-color: var(--accent-color);
+}
+
+.dataControls,
+.playbackControls,
+.visualizationControls,
+.infoSection,
+.legendSection {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.infoSection h3,
+.legendSection h3,
+.dataControls h3,
+.playbackControls h3,
+.visualizationControls h3 {
+  margin-top: 0;
+}
+
+.legendContainer {
+  margin-top: 10px;
+}
+
+.legendGradient {
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(to right, blue, red);
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+.legendLabels {
+  display: flex;
+  justify-content: space-between;
+}
+
+.noDataMessage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1.2em;
+  color: #777;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .appContainer {
+    flex-direction: row;
+  }
+  .mainView {
+    flex: 3;
+  }
+  .rightPanel {
+    flex: 1;
+    border-top: none;
+    border-left: 1px solid #ccc;
+  }
+}
