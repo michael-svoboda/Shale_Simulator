@@ -1,0 +1,1 @@
+{"grid_initialization_time": 0.0011775493621826172, "bc_setting_time": 5.054473876953125e-05, "build_transmissibility_matrix_time": 0.10444855690002441, "fracture_creation_time": 0.0002701282501220703, "simulation_loop_total_time": 76.08248782157898, "average_time_per_timestep": 0.07608248782157898, "overall_run_time": 76.08249044418335}
