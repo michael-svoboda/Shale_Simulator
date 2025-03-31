@@ -4,6 +4,9 @@ backend/*.pyc
 backend/venv/
 backend/env/
 backend/.env
+backend/*.json
+backend/*.gltf
+
 
 # React (Node)
 frontend/node_modules/
